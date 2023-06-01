@@ -1,0 +1,68 @@
+App\Entity\User:
+  openapi_context:
+    security:
+      - bearerAuth:
+  attributes:
+    security: 'is_granted("ROLE_SUPER_ADMIN")'
+
+  collectionOperations:
+    get:
+      openapi_context:
+        security:
+          - bearerAuth:
+
+    post:
+      read: [ 'false' ]
+      output: [ 'true' ]
+
+      openapi_context:
+
+        security:
+          - bearerAuth:
+
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  email:
+                    type: string
+                    description: The e-mail (userName) of the User on authentication process.
+
+                  password:
+                    type: string
+                    description: The default password of the User.
+
+                  name:
+                    type: name
+                    description: Name of client.
+
+        responses:
+          '201':
+            description: User created successfully.
+          '400':
+            description: Bad request.
+          '401':
+            description: JWT Token not found.
+          '5XX':
+            description: Unexpected error.
+
+
+  itemOperations:
+    get:
+      openapi_context:
+        security:
+          - bearerAuth:
+
+    put:
+      openapi_context:
+        security:
+          - bearerAuth:
+
+    delete:
+      openapi_context:
+        security:
+          - bearerAuth:
+

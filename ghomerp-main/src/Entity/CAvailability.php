@@ -1,0 +1,107 @@
+<?php
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
+
+/**
+ * CAvailability
+ * @ApiResource()
+ * @ORM\Table(name="c_availability", uniqueConstraints={@ORM\UniqueConstraint(name="uk_c_availability", columns={"code"})})
+ * @ORM\Entity
+ */
+class CAvailability
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="rowid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $rowid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="code", type="string", length=30, nullable=false)
+     */
+    private $code;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="label", type="string", length=60, nullable=false)
+     */
+    private $label;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="active", type="boolean", nullable=false, options={"default"="1"})
+     */
+    private $active = true;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="position", type="integer", nullable=false)
+     */
+    private $position = '0';
+
+    public function getRowid(): ?int
+    {
+        return $this->rowid;
+    }
+
+    public function getCode(): ?string
+    {
+        return $this->code;
+    }
+
+    public function setCode(string $code): self
+    {
+        $this->code = $code;
+
+        return $this;
+    }
+
+    public function getLabel(): ?string
+    {
+        return $this->label;
+    }
+
+    public function setLabel(string $label): self
+    {
+        $this->label = $label;
+
+        return $this;
+    }
+
+    public function getActive(): ?bool
+    {
+        return $this->active;
+    }
+
+    public function setActive(bool $active): self
+    {
+        $this->active = $active;
+
+        return $this;
+    }
+
+    public function getPosition(): ?int
+    {
+        return $this->position;
+    }
+
+    public function setPosition(int $position): self
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+
+}
