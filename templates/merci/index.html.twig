@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MerciController!{% endblock %}
+{% block stylesheets %}
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="{{asset('css/styles.min.css?h=f3f5e3e0fd9b38313d60c6777e01a15a')}}"/>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% endblock %}
+{% block body %}
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		.ticker-container {
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.ticker {
+			white-space: nowrap;
+			animation: ticker-animation 15s linear infinite;
+		}
+
+		.ticker-item {
+			color: red;
+			display: inline-block;
+
+			margin: 4px; /* Adjust the distance between each news item */
+		}
+
+		@keyframes ticker-animation {
+			0% {
+				transform: translateX(100%);
+			}
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+	</style>
+
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		</head>
+		<body>
+
+
+			<div class="ticker-container">
+				<div class="ticker">
+					<div class="ticker-item">Dernières nouvelles: 50% offre pour le premier achat</div>
+					<div class="ticker-item">Nouvelles mises à jour : choisir votre appareil plus rapide</div>
+					<div class="ticker-item">Annonce importante: 24h/7j support.</div>
+				</div>
+			</div>
+
+
+
+
+<div class="example-wrapper">
+<div class="container">
+    <h1>Merci pour Votre Commande ✅</h1>
+	<h2>On va vous contacter ultérieument 😊</h2>
+    <p> <a class="btn btn-primary" href="{{ path('app_location') }}">Retour à l'accueil</a></p>
+    </div>
+
+</div>
+{% endblock %}

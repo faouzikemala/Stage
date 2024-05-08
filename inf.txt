@@ -1,0 +1,20 @@
+
+Symfony CLI version 5.7.6 (c) 2021-2024 Fabien Potencier (2023-12-15T12:39:56Z - stable)
+
+
+PHP 8.2.13 (cli) (built: Nov 21 2023 16:09:25) (ZTS Visual C++ 2019 x64)
+Copyright (c) The PHP Group
+Zend Engine v4.2.13, Copyright (c) Zend Technologies
+    with Zend OPcache v8.2.13, Copyright (c), by Zend Technologies
+    with Xdebug v3.2.2, Copyright (c) 2002-2023, by Derick Rethans
+
+
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 2.6.3 2023-09-15 09:38:21
+
+Node : v18.17.1

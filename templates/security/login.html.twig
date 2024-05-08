@@ -1,0 +1,158 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+{% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+            <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+            <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          />
+          <link
+            rel="stylesheet"
+            href="{{asset('css/styles.min.css?h=f3f5e3e0fd9b38313d60c6777e01a15a')}}"
+          />
+          <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% endblock %}
+
+{% block body %}
+
+
+
+
+<nav class="navbar navbar-expand-md  py-3" data-bs-theme="dark" style="background-color:#00000f;">
+<div class="container">
+	<a class="navbar-brand d-flex align-items-center" href="{{ path('app_home') }}">
+		<img src="/images/1.jpg" alt="logo" style="height:50px;">
+	</a>
+	<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-5">
+		<span class="visually-hidden">Toggle navigation</span>
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div id="navcol-5" class="collapse navbar-collapse">
+		<ul class="navbar-nav ms-auto">
+			{# <li class="nav-item">
+				<a class="nav-link" href="{{path('app_user_crud_index')}}">Users</a>
+			</li> #}
+			<li class="nav-item">
+				<a class="nav-link" href="{{ path('app_home') }}#pres">Présentation</a>
+			</li>
+			<li class="nav-item">
+		<a class="nav-link" href="{{ path('app_home') }}#service">Services</a>
+	</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{{ path('app_home') }}#contact">Contact</a>
+			</li>
+		</ul>
+		
+	</div>
+</div>
+</nav>
+
+<br>
+<br>
+
+
+
+
+
+
+	<main class="d-flex w-100">
+		<div class="container d-flex flex-column">
+			<div class="row vh-100">
+				<div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto d-table h-100">
+					<div class="d-table-cell align-middle">
+
+						<div class="text-center mt-4">
+							<h1 class="h2">Welcome back!</h1>
+							<p class="lead">
+								Sign in to your account to continue
+							</p>
+						</div>
+
+						<div class="card">
+							<div class="card-body">
+								<div class="m-sm-3">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									<form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+										<div class="mb-3">
+											<label class="form-label" for="inputEmail">Email</label>
+											<input class="form-control form-control-lg" value="{{ last_username }}" id="inputEmail" type="email" name="email" autocomplete="email" required autofocus placeholder="Enter your email" />
+										</div>
+										<div class="mb-3">
+											<label class="form-label" for="inputPassword">Password</label>
+											<input class="form-control form-control-lg" type="password" autocomplete="current-password" required name="password" placeholder="Enter your password" />
+                                                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+										</div>
+										<div>
+											<div class="form-check align-items-center">
+												<input id="customControlInline" type="checkbox" class="form-check-input" value="remember-me" name="remember-me" checked>
+												<label class="form-check-label text-small" for="customControlInline">Remember me</label>
+											</div>
+										</div>
+										<div class="d-grid gap-2 mt-3">
+											    <button class="btn btn-lg btn-primary" type="submit">Sign in</button>
+										</div>
+									</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    
+								</div>
+							</div>
+						</div>
+						<div class="text-center mb-3">
+							Don't have an account? <a href="{{path('app_register')}}">Sign up</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="js/app.js"></script>
+
+
+{% block javascript %}
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+           <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+        <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
+{% endblock %}
