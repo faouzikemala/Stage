@@ -1,0 +1,245 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LocationController!
+{% endblock %}
+{% block stylesheets %}
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="{{asset('css/styles.min.css?h=f3f5e3e0fd9b38313d60c6777e01a15a')}}"/>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% endblock %}
+
+{% block body %}
+
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		.ticker-container {
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.ticker {
+			white-space: nowrap;
+			animation: ticker-animation 15s linear infinite;
+		}
+
+		.ticker-item {
+			color: red;
+			display: inline-block;
+
+			margin: 4px; /* Adjust the distance between each news item */
+		}
+
+		@keyframes ticker-animation {
+			0% {
+				transform: translateX(100%);
+			}
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+	</style>
+		<nav class="navbar navbar-expand-md  py-3" data-bs-theme="dark" style="background-color:#00000f;">
+		<div class="container">
+			<a class="navbar-brand d-flex align-items-center" href="{{ path('app_home') }}">
+				<img src="/images/1.jpg" alt="logo" style="height:50px;">
+			</a>
+			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-5">
+				<span class="visually-hidden">Toggle navigation</span>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div id="navcol-5" class="collapse navbar-collapse">
+				<ul class="navbar-nav ms-auto">
+					{# <li class="nav-item">
+						<a class="nav-link" href="{{path('app_user_crud_index')}}">Users</a>
+					</li> #}
+					<li class="nav-item">
+						<a class="nav-link" href="#pres">Présentation</a>
+					</li>
+					<li class="nav-item">
+				<a class="nav-link" href="#service">Services</a>
+			</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+
+					
+				</ul>
+				<a class="btn btn-success ms-md-2" href="{{ path('app_profile') }}">Profile</a>
+				<a class="btn btn-danger ms-md-1" href="{{ path('app_logout') }}">Sign out</a>
+			</div>
+		</div>
+	</nav>
+
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		</head>
+		<body>
+
+
+			<div class="ticker-container">
+				<div class="ticker">
+					<div class="ticker-item">Dernières nouvelles: 50% offre pour le premier achat</div>
+					<div class="ticker-item">Nouvelles mises à jour : choisir votre appareil plus rapide</div>
+					<div class="ticker-item">Annonce importante: 24h/7j support.</div>
+				</div>
+			</div>
+
+
+			<div>
+				<img src="/images/tt.webp" alt="logo" style="width:100%;">
+			</div>
+		</body>
+	</html>
+</br>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+
+
+		
+
+
+			<img src="/images/13.jpg" alt="logo" style="width:100%;margin:20px;border-radius:8px;">
+
+
+		</div>
+		<div class="col-md-6">
+
+
+			<div class="container">
+				<h1>MST01 Sensor</h1>
+				<p>MST01 is an industrial Bluetooth® temperature and humidity sensor designed to fit into all industrial environmental monitoring scenarios, especially in the manufacturing, healthcare, and storage sectors. It features adjustable temperature and humidity alarm thresholds, as well as a long broadcasting range of up to 656 feet (200m). One of the key features of MST01 is its ability to support optional probes. These probes can be used to measure temperature and humidity levels in various settings to adapt to specific applications.</p>
+				<ul>
+					<li>High precision</li>
+					<li>Temperature & humidity alarm thresholds</li>
+					<li>20,480 local data storage</li>
+					<li>Broadcasting range of 656 feet (200m)</li>
+					<li>4 optional probes</li>
+					<li>Dust and water resistance IP67/IP65</li>
+					<li>Wide temperature range monitoring (-40 to 125 ℃)</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<br><br><br><br>
+
+
+		<div class="container" style="background-color:#E6E6E6;border-radius:8px;margin:20px;">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="container">
+						<h1>Conçu pour une installation flexible</h1>
+						<h2>Avec le support</h2>
+						<p>MST01 est livré avec un support, facile à fixer avec des vis au mur, au plafond et aux coins, par exemple. Extrêmement durable.</p>
+
+						<h2>Avec le ruban adhésif double face</h2>
+						<p>MST01 est également livré avec du ruban adhésif double face. Il est également suffisamment stable pour être installé sur un sol sec et surface propre.</p>
+					</div>
+				</div>
+				<div class="col-md-6"><img src="/images/13.png" alt="logo" style="width:100%;margin:20px;border-radius:8px;"></div>
+			</div>
+		</div>
+		<br><br>
+		<br><br>
+
+
+		<div class="container" style="border-radius:8px;">
+			<div class="row">
+				<div class="col-md-6"><img src="/images/14.jpg" alt="logo" style="width:100%;border-radius:8px;margin:20px;"></div>
+				<div class="col-md-6">
+					<div class="container">
+						<h1>Medical Environment Monitoring</h1>
+						<ul>
+							<li>Medicine and vaccines storage.</li>
+							<li>Alarm threshold and timely abnormal alert.</li>
+							<li>Precise control of medicine storage environment.</li>
+							<li>Broadcasting range of 656 feet (200m)</li>
+							<li>4 optional probes</li>
+							<li>Dust and water resistance IP67/IP65</li>
+							<li>Wide temperature range monitoring (-40 to 125 ℃)</li>
+						</ul>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<br><br><br>
+
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-12"><img src="/images/11.png" alt="logos" style="width:100%;border-radius:8px;margin:20px;"></div>
+				<div class="col-md-12"><img src="/images/14.png" alt="logoss" style="width:100%;border-radius:8px;margin:20px;"></div>
+			</div>
+
+		</div>
+
+
+		<section class="py-4 py-xl-5">
+			<div class="container">
+				<div class="text-center p-4 p-lg-5">
+					<p class="fw-bold text-primary mb-2">Commander Maintenant !</p>
+					<h1 class="fw-bold mb-4">Découvrez nos produits et commandez<br/>
+						dès maintenant pour une livraison rapide !</h1>
+					<a class="btn btn-primary ms-md-2" href="{{ path('app_commande') }}">Commande</a>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="position-relative py-4 py-xl-5">
+			<div class="container position-relative">
+
+				<div>
+					<form class="p-3 p-xl-4" method="post">
+						<h4>Contact us</h4>
+						<p class="text-muted">Eros ligula lobortis elementum amet commodo ac nibh ornare, eu lobortis.</p>
+						<div class="mb-3">
+							<label class="form-label" for="name">Name</label><input id="name" class="form-control" type="text" name="name"/></div>
+						<div class="mb-3">
+							<label class="form-label" for="email">Email</label><input id="email" class="form-control" type="email" name="email"/></div>
+						<div class="mb-3">
+							<label class="form-label" for="message">Message</label>
+							<textarea id="message" class="form-control" name="message" rows="6"></textarea>
+						</div>
+						<div class="mb-3">
+							<a class="btn btn-primary" href="#bottom">Send</a>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</section>
+
+
+	</body>
+
+</html>
+
+<div class="ticker-container">
+	<div class="ticker">
+		<div class="ticker-item">Dernières nouvelles: 50% offre pour le premier achat</div>
+		<div class="ticker-item">Nouvelles mises à jour : choisir votre appareil plus rapide</div>
+		<div class="ticker-item">Annonce importante: 24h/7j support.</div>
+	</div>
+</div>
+
+{% block javascript %}
+
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+	<script href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}{% endblock %}
